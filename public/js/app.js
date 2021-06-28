@@ -7,7 +7,7 @@ const message2 = document.querySelector('#message2')
 weatherForm.addEventListener('submit',(e) => {
     e.preventDefault()
     const location = search.value
-    fetch('http://localhost:3000/weather?address='+location).then((data) => {
+    fetch('/weather?address='+location).then((data) => {
         return data.json()
     }).then((data) => {
         message1.textContent = data.latitude
